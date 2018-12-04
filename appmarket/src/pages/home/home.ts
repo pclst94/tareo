@@ -6,9 +6,16 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  username:string;
 
   constructor(public navCtrl: NavController) {
 
+  }
+
+  login(){
+  	console.log("Username: "+ this.username);
+  	console.log("Password: "+ this.password);
+  	this.navCtrl.push(MainstPage);
   }
 
 }
