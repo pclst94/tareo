@@ -7,6 +7,7 @@
 <ion-header adding center text-center>
   <ion-navbar color="dark">
     <ion-title>Supervisor Simple</ion-title>
+    
     <ion-buttons end>
       <button ion-button icon-only (click)="switchStyle()">
         <ion-icon name="bulb"></ion-icon>
@@ -14,10 +15,16 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content>
 
-
+<ion-content adding>
+	<ion-label>
+		{{currentDate}}
+	</ion-label>
+</ion-content>
 <ion-content adding center text-center>
+	<ion-label>
+		{{currentDate}}
+	</ion-label>
 <ngx-datatable class="fullscreen" [ngClass]="tablestyle" [rows]="rows" [columnMode]="'force'" [sortType]="'multi'" [reorderable]="false">
  <ngx-datatable-column name="Ubicacion"></ngx-datatable-column>
     <ngx-datatable-column name="Empleados"></ngx-datatable-column>

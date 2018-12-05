@@ -14,6 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'table.html',
 })
 export class TablePage {
+ currentDate;
  rows = [
     {
       "ubicacion": "CD AYACUCHO",
@@ -39,6 +40,7 @@ export class TablePage {
   tablestyle = 'bootstrap';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.currentDate = new Date();
   }
 
   switchStyle() {
