@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { TablePage } from './table';
-import { NgDatatableModule } from '@swimlane/ngx-datatable';
+import { TablePage } from '../table/table';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 @NgModule({
   declarations: [
     TablePage,

@@ -14,28 +14,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'table.html',
 })
 export class TablePage {
-  row = [
-  	{
-  	"Ubicación": "CD AYACUCHO",
-  	"# de Empleados": "4",
-  	"Turnos": "22-06" 
-  	},
-  	{
-  	"Ubicación": "CD CAÑETE",
-  	"# de Empleados": "7",
-  	"Turnos": "22-06" 
-  	},
-  	{
-  	"Ubicación": "CD HUANCAVELICA",
-  	"# de Empleados": "2",
-  	"Turnos": "22-06" 
-  	},
-  	{
-  	"Ubicación": "CD HUANCAYO",
-  	"# de Empleados": "8",
-  	"Turnos": "22-06" 
-  	}
-
+ rows = [
+    {
+      "ubicacion": "CD AYACUCHO",
+      "empleados": 4,
+      "turno": 22
+    },
+    {
+      "ubicacion": "CD HUANCAVELICA",
+      "empleados": 8,
+      "turno": 12
+    },
+    {
+      "ubicacion": "CD HUANCAYO",
+      "empleados": 7,
+      "turno": 6
+    },
+    {
+      "ubicacion": "CD CAÑETE",
+      "empleados": 2,
+      "turno": 22
+    }
   ];
   tablestyle = 'bootstrap';
 
@@ -49,5 +48,7 @@ export class TablePage {
       this.tablestyle = 'dark';
     }
   }
-
+   getRowClassx(rows){
+    return rows.Ubicación='CD HUANCAYO';
+  }
 }
