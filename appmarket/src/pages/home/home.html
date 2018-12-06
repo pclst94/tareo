@@ -16,4 +16,8 @@
   </ion-item>
   </ion-list>
   <button ion-button full (click)="login()">Log In</button>
+  <ion-item>
+    <ion-input [(ngModel)]="myInput"></ion-input>
+  </ion-item>
+  <button ion-button (click)="btnAddClicked()" >Añadir</button>
 </ion-content>
