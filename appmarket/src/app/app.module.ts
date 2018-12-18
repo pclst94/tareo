@@ -13,17 +13,21 @@ import { ServiceProvider } from '../providers/service/service';
   declarations: [
     MyApp,
     HomePage,
-    MainstPage
+    MainstPage,
+    CuadrillaPage,
+    Sel-cuadrillaPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(HomePage)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    MainstPage
+    MainstPage,
+    CuadrillaPage,
+    Sel-cuadrillaPage
   ],
   providers: [
     StatusBar,
