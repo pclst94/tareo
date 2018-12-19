@@ -4,15 +4,44 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>SelCuadrilla</ion-title>
+<<ion-header adding center text-center>
+  <ion-navbar color="dark">
+    <ion-title>Seleccionar Cuadrilla</ion-title>
+    
+    <ion-buttons end>
+      <button ion-button icon-only (click)="switchStyle()">
+        <ion-icon name="bulb"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content adding>
+	<ion-label>
+		{{currentDate}}
+	</ion-label>
+	<ion-label>
+		Turno Tarde
+	</ion-label>
+</ion-content>
+<ion-content adding center text-center>
+	<ion-label>
+		Cliente
+	</ion-label>
+	<ion-label>
+		Ubicación
+	</ion-label>
+	<ion-label>
+		Hora de Inicio
+	</ion-label>
 
-<ion-content padding>
-
+<ngx-datatable class="fullscreen" [ngClass]="tablestyle" [rows]="rows" [columnMode]="'force'" [sortType]="'multi'" [reorderable]="false">
+ <ngx-datatable-column name="Paterno"></ngx-datatable-column>
+    <ngx-datatable-column name="Materno"></ngx-datatable-column>
+    <ngx-datatable-column name="Nombre"></ngx-datatable-column>
+</ngx-datatable>
+	<ion-label>Cuadrillas Seleccionadas</ion-label>
+	<ion-label>
+		<button ion-button block>Confirmar Cuadrillas</button>
+	</ion-label>
 </ion-content>

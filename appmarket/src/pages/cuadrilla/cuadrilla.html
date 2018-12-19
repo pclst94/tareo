@@ -4,15 +4,90 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Diary</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- Internal Library
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    -->
+    <!-- Cloud Library -->
+    <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <!-- Needed for Cordova/PhoneGap (will be a 404 during development) -->
+    <script src="cordova.js"></script>
+  </head>
+    <body ng-app="app">
+  <div>
+  <div>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+  </div>
+</div>
+     
+     <script id="home.html" type="text/ng-template">
+<ion-view title="Home" id="page1">
 
-  <ion-navbar>
-    <ion-title>Cuadrilla</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+  <ion-content padding="true" class="has-header">
+  	<ion-card>
+  		<ion-card-content>
+  			<ion-card-title>
+      			Cuadrilla 1
+      		</ion-card-title>
+	<table>
+		<thead>
+		<tr>
+			<th>Apellido Paterno</th>
+			<th>Apellido Materno</th>
+			<th>Nombre</th>
+			<th>Leader?
+				<ion-scroll scrollX="true">
+				</ion-scroll>
+			</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>Acosta</td>
+			<td>Palma</td>
+			<td>Carlos Hernan</td>
+			<td>
+				<ion-item>
+					<ion-checkbox [(ngModel)]="yes"></ion-checkbox>
+				</ion-item>
+			</td>
+		</tr>
+		<tr>
+		  <td>Albines</td>
+		  <td>Sosa</td>
+		  <td>Raul Manuel</td>
+		  <td>
+		  	<ion-item>
+		  		<ion-checkbox [(ngModel)]="yes"></ion-checkbox>
+		  	</ion-item>
+		  </td>
+		</tr>
+		<tr>
+		  <td>Avila</td>
+		  <td>Pizarro</td>
+		  <td>Mayra Lizet</td>
+		  <td>
+				<ion-item>
+					<ion-checkbox [(ngModel)]="yes"></ion-checkbox>
+				</ion-item>
+		  </td>
+		</tr>
+	</tbody>
+	</table>
+		</ion-card-content>
+		</ion-card>
+       </ion-content>
+</ion-view>
+    </script>    
+         
+  </body>
+</html>
